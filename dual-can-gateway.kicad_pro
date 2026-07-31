@@ -709,7 +709,7 @@
         "uuid": "00000000-0000-0000-0000-000064d1a2f1"
       }
     ],
-    "used_designators": "C32",
+    "used_designators": "C32,J1-3,CAN\\-FT\\-MITM1,AUTO_OFF1,CAN\\-FT\\-LISTEN1,CAN\\-HS\\-LISTEN1,CAN\\-HS\\-MITM1",
     "variants": []
   },
   "sheets": [
