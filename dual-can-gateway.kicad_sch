@@ -191,6 +191,491 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Conn_01x03_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03_Pin"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x03_Pin_1_1"
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Conn_01x04_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04_Pin"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_Pin_1_1"
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:TestPoint"
 			(pin_numbers
 				(hide yes)
@@ -6738,7 +7223,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 152.4) (xy 191.77 152.4)
+			(xy 191.77 152.4) (xy 271.78 152.4)
 		)
 		(stroke
 			(width 0)
@@ -6805,16 +7290,6 @@
 			(type default)
 		)
 		(uuid "04fdda03-1130-4f8e-8d85-b405d2a1b301")
-	)
-	(wire
-		(pts
-			(xy 271.78 41.91) (xy 270.51 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0545ccf7-ff78-4ccb-9bc9-a2af30b66543")
 	)
 	(wire
 		(pts
@@ -6958,6 +7433,16 @@
 	)
 	(wire
 		(pts
+			(xy 242.57 146.05) (xy 270.51 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b204799-47c6-4584-aac4-94e81fbe3b71")
+	)
+	(wire
+		(pts
 			(xy 127 96.52) (xy 129.54 96.52)
 		)
 		(stroke
@@ -7015,6 +7500,16 @@
 			(type default)
 		)
 		(uuid "0c922810-8d16-415b-a4c5-1f189f40eba8")
+	)
+	(wire
+		(pts
+			(xy 269.24 29.21) (xy 269.24 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cda520e-bba8-4804-8493-7560de9b12da")
 	)
 	(wire
 		(pts
@@ -7115,6 +7610,16 @@
 			(type default)
 		)
 		(uuid "10606712-7c6a-48ac-99ba-db1c7315c0be")
+	)
+	(wire
+		(pts
+			(xy 269.24 49.53) (xy 275.59 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "108b94d6-9200-4ea0-8c64-dbabd3f914f8")
 	)
 	(wire
 		(pts
@@ -7358,6 +7863,16 @@
 	)
 	(wire
 		(pts
+			(xy 210.82 242.57) (xy 210.82 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a3d499b-6bfe-45f6-95cc-84a3a26d6172")
+	)
+	(wire
+		(pts
 			(xy 154.94 226.06) (xy 157.48 223.52)
 		)
 		(stroke
@@ -7415,16 +7930,6 @@
 			(type default)
 		)
 		(uuid "1c22dd15-8dfe-45ac-ad4a-4a8020395e77")
-	)
-	(wire
-		(pts
-			(xy 271.78 34.29) (xy 273.05 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c446a11-fa26-4b08-88ea-d9ee0007f68c")
 	)
 	(wire
 		(pts
@@ -7848,7 +8353,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 139.7) (xy 243.84 139.7)
+			(xy 243.84 139.7) (xy 275.59 139.7)
 		)
 		(stroke
 			(width 0)
@@ -8158,7 +8663,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 17.78) (xy 271.78 19.05)
+			(xy 271.78 17.78) (xy 273.05 19.05)
 		)
 		(stroke
 			(width 0)
@@ -8468,16 +8973,6 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 168.91) (xy 270.51 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4157e718-064e-4b35-8063-a3239096dfa7")
-	)
-	(wire
-		(pts
 			(xy 93.98 77.47) (xy 93.98 71.12)
 		)
 		(stroke
@@ -8735,6 +9230,16 @@
 			(type default)
 		)
 		(uuid "4a435898-0ac7-4d2f-b893-a73128dbe40a")
+	)
+	(wire
+		(pts
+			(xy 271.78 152.4) (xy 271.78 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a8ea279-d537-45fe-94aa-435229834aa7")
 	)
 	(wire
 		(pts
@@ -9028,6 +9533,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 41.91) (xy 275.59 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "570ea98b-801f-44dc-bb4f-d6d96f75dbb0")
+	)
+	(wire
+		(pts
 			(xy 120.65 210.82) (xy 119.38 209.55)
 		)
 		(stroke
@@ -9075,16 +9590,6 @@
 			(type default)
 		)
 		(uuid "58fa709a-4e01-4df3-bceb-669cfe05ab4a")
-	)
-	(wire
-		(pts
-			(xy 269.24 54.61) (xy 274.32 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5930ae43-7214-4489-a846-7d6d72978320")
 	)
 	(wire
 		(pts
@@ -9448,16 +9953,6 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 242.57) (xy 215.9 242.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "655de7f0-9d6e-486c-b99f-ee696eadcf2e")
-	)
-	(wire
-		(pts
 			(xy 134.62 255.27) (xy 137.16 255.27)
 		)
 		(stroke
@@ -9618,6 +10113,16 @@
 	)
 	(wire
 		(pts
+			(xy 267.97 46.99) (xy 275.59 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ccf5578-c7de-467a-9a08-1770eae0d648")
+	)
+	(wire
+		(pts
 			(xy 203.2 243.84) (xy 203.2 246.38)
 		)
 		(stroke
@@ -9675,16 +10180,6 @@
 			(type default)
 		)
 		(uuid "6e5eaabf-c095-4dc2-a6b3-9ee4d45983dc")
-	)
-	(wire
-		(pts
-			(xy 278.13 242.57) (xy 279.4 242.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e692fea-c9df-4666-87c6-93498623d853")
 	)
 	(wire
 		(pts
@@ -9858,6 +10353,16 @@
 	)
 	(wire
 		(pts
+			(xy 275.59 166.37) (xy 275.59 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76d68eb1-dbde-41dc-9628-36577a1e2d2b")
+	)
+	(wire
+		(pts
 			(xy 123.19 158.75) (xy 129.54 158.75)
 		)
 		(stroke
@@ -9905,6 +10410,16 @@
 			(type default)
 		)
 		(uuid "78752792-e7c8-46c0-8a78-2ca39d681807")
+	)
+	(wire
+		(pts
+			(xy 276.86 243.84) (xy 276.86 242.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78c1b44f-a646-41fa-8763-b801942008c8")
 	)
 	(wire
 		(pts
@@ -10038,16 +10553,6 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 48.26) (xy 274.32 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d0a8b0b-077f-4943-b4aa-befc80275dc7")
-	)
-	(wire
-		(pts
 			(xy 171.45 231.14) (xy 170.18 231.14)
 		)
 		(stroke
@@ -10165,16 +10670,6 @@
 			(type default)
 		)
 		(uuid "7faf0300-70e9-4548-a5fb-3bbfe8aee9ac")
-	)
-	(wire
-		(pts
-			(xy 270.51 40.64) (xy 270.51 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "802a3870-1259-454e-92d3-8aabaf38bc88")
 	)
 	(wire
 		(pts
@@ -10445,6 +10940,16 @@
 			(type default)
 		)
 		(uuid "8b2a55d1-f040-4aa9-b1c1-e02c68ee107e")
+	)
+	(wire
+		(pts
+			(xy 213.36 243.84) (xy 213.36 242.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c2f12cd-9f28-4fa1-839c-fee0d17fde7d")
 	)
 	(wire
 		(pts
@@ -10768,16 +11273,6 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 165.1) (xy 270.51 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9aad4d64-0cbf-4fc1-9db3-c66321207a6f")
-	)
-	(wire
-		(pts
 			(xy 162.56 228.6) (xy 171.45 228.6)
 		)
 		(stroke
@@ -10795,6 +11290,16 @@
 			(type default)
 		)
 		(uuid "9b9ca889-cd90-437b-a710-9ecf79cf8e9f")
+	)
+	(wire
+		(pts
+			(xy 267.97 34.29) (xy 267.97 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bc3e19e-ce3d-4f31-be99-a3c890c3bdfd")
 	)
 	(wire
 		(pts
@@ -10828,13 +11333,13 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 19.05) (xy 271.78 34.29)
+			(xy 275.59 143.51) (xy 275.59 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9de18f59-71b4-4901-84e7-76d9abffad53")
+		(uuid "9e0c677e-7628-42ab-8484-c51936c738d4")
 	)
 	(wire
 		(pts
@@ -11108,6 +11613,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 26.67) (xy 270.51 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5e1caeb-23d6-43bc-be07-520b97523d1a")
+	)
+	(wire
+		(pts
 			(xy 52.07 240.03) (xy 64.77 240.03)
 		)
 		(stroke
@@ -11258,16 +11773,6 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 35.56) (xy 274.32 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab1f344c-b915-4548-ac73-3648cd4cf786")
-	)
-	(wire
-		(pts
 			(xy 134.62 26.67) (xy 134.62 91.44)
 		)
 		(stroke
@@ -11408,7 +11913,7 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 175.26) (xy 81.28 175.26)
+			(xy 81.28 175.26) (xy 271.78 175.26)
 		)
 		(stroke
 			(width 0)
@@ -11448,16 +11953,6 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 53.34) (xy 269.24 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0b75269-51c8-40da-bc12-04aca5488da5")
-	)
-	(wire
-		(pts
 			(xy 182.88 255.27) (xy 185.42 255.27)
 		)
 		(stroke
@@ -11485,6 +11980,16 @@
 			(type default)
 		)
 		(uuid "b150d540-4e31-4fb1-80c7-03fd221b899c")
+	)
+	(wire
+		(pts
+			(xy 213.36 242.57) (xy 215.9 242.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1a00d6c-315d-4a71-9a56-82dc56564a4c")
 	)
 	(wire
 		(pts
@@ -11728,6 +12233,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 171.45) (xy 275.59 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6c540ef-43ce-4acc-9758-e6f40ca7d98d")
+	)
+	(wire
+		(pts
 			(xy 41.91 203.2) (xy 40.64 201.93)
 		)
 		(stroke
@@ -11798,6 +12313,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 165.1) (xy 270.51 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8d53b85-6149-4ac4-9ad0-f06d21f55e12")
+	)
+	(wire
+		(pts
 			(xy 129.54 101.6) (xy 128.27 101.6)
 		)
 		(stroke
@@ -11815,6 +12340,16 @@
 			(type default)
 		)
 		(uuid "b8ed2ba9-fc47-4224-9fbd-53f91e617513")
+	)
+	(wire
+		(pts
+			(xy 276.86 242.57) (xy 279.4 242.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b94f3517-463e-4a8a-850b-a217836aeb1e")
 	)
 	(wire
 		(pts
@@ -11878,13 +12413,13 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 41.91) (xy 271.78 41.91)
+			(xy 273.05 19.05) (xy 273.05 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bb55f042-eb0e-4877-89a5-430de25a3a79")
+		(uuid "bafcfc65-d9b6-465a-a7a0-8d4de520ae5f")
 	)
 	(wire
 		(pts
@@ -12078,7 +12613,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 17.78) (xy 270.51 17.78)
+			(xy 160.02 17.78) (xy 271.78 17.78)
 		)
 		(stroke
 			(width 0)
@@ -12165,6 +12700,16 @@
 			(type default)
 		)
 		(uuid "c5d59000-a7e4-4124-a846-9b8b5b30b746")
+	)
+	(wire
+		(pts
+			(xy 271.78 146.05) (xy 275.59 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5eb0496-24c4-4c78-bc81-3282cd6de159")
 	)
 	(wire
 		(pts
@@ -12265,6 +12810,16 @@
 			(type default)
 		)
 		(uuid "ca07c1ab-2878-4ed9-9978-adbd4d487f95")
+	)
+	(wire
+		(pts
+			(xy 271.78 175.26) (xy 271.78 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca2b3390-7197-405d-9d11-21b396ab8b0f")
 	)
 	(wire
 		(pts
@@ -12498,16 +13053,6 @@
 	)
 	(wire
 		(pts
-			(xy 267.97 34.29) (xy 267.97 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cfe7514e-a56f-47f8-bb62-37cbfd673621")
-	)
-	(wire
-		(pts
 			(xy 100.33 69.85) (xy 106.68 69.85)
 		)
 		(stroke
@@ -12595,16 +13140,6 @@
 			(type default)
 		)
 		(uuid "d29db9a7-a3c8-4e2a-ac57-c43e5c04a5bc")
-	)
-	(wire
-		(pts
-			(xy 274.32 146.05) (xy 242.57 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2bf8fa0-b6c3-496e-8f0d-0e7d58793b86")
 	)
 	(wire
 		(pts
@@ -12705,6 +13240,16 @@
 			(type default)
 		)
 		(uuid "d4d73adf-8480-4a74-8bd9-f4b1fe914422")
+	)
+	(wire
+		(pts
+			(xy 274.32 242.57) (xy 274.32 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4eab7f8-1116-4343-89e6-34e333c65d34")
 	)
 	(wire
 		(pts
@@ -12888,16 +13433,6 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 46.99) (xy 270.51 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "df4dac0a-6034-4d3f-a9fc-701bae45ed05")
-	)
-	(wire
-		(pts
 			(xy 128.27 57.15) (xy 128.27 68.58)
 		)
 		(stroke
@@ -13048,6 +13583,16 @@
 	)
 	(wire
 		(pts
+			(xy 273.05 44.45) (xy 275.59 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4cd7c4b-2b87-4af4-91b8-5241e73fe559")
+	)
+	(wire
+		(pts
 			(xy 128.27 176.53) (xy 128.27 189.23)
 		)
 		(stroke
@@ -13178,7 +13723,17 @@
 	)
 	(wire
 		(pts
-			(xy 271.78 162.56) (xy 274.32 162.56)
+			(xy 270.51 146.05) (xy 270.51 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9711a5e-a83a-472f-9c85-d5978e17f7de")
+	)
+	(wire
+		(pts
+			(xy 271.78 162.56) (xy 275.59 162.56)
 		)
 		(stroke
 			(width 0)
@@ -13248,7 +13803,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 165.1) (xy 135.89 165.1)
+			(xy 135.89 165.1) (xy 270.51 165.1)
 		)
 		(stroke
 			(width 0)
@@ -13488,6 +14043,16 @@
 	)
 	(wire
 		(pts
+			(xy 271.78 168.91) (xy 275.59 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3158f17-3412-4437-a0bf-54069999788b")
+	)
+	(wire
+		(pts
 			(xy 163.83 203.2) (xy 165.1 201.93)
 		)
 		(stroke
@@ -13585,6 +14150,16 @@
 			(type default)
 		)
 		(uuid "f7352b68-837a-42b4-b161-5973b1b57a0d")
+	)
+	(wire
+		(pts
+			(xy 270.51 148.59) (xy 275.59 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f77256df-d4a1-46a7-abfb-9946a323bb40")
 	)
 	(wire
 		(pts
@@ -13775,16 +14350,6 @@
 			(type default)
 		)
 		(uuid "fe9de991-5f34-44df-9072-dfb9ee549848")
-	)
-	(wire
-		(pts
-			(xy 269.24 29.21) (xy 269.24 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "feb44b8e-fce6-4e63-9826-e8583f2c05bb")
 	)
 	(wire
 		(pts
@@ -14307,6 +14872,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 280.67 46.99 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "07c4355c-0000-4bfb-b522-9ab59f86306b")
+		(property "Reference" "ESP_FLASH1"
+			(at 286.766 45.466 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04_Pin"
+			(at 280.035 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 280.67 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 280.67 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 280.67 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f9c7e403-99e6-44c4-b30b-2315bb23b542")
+		)
+		(pin "1"
+			(uuid "2aacac83-4ad3-4051-8492-0e05aaf302d1")
+		)
+		(pin "3"
+			(uuid "7d1a2aa9-a208-4523-b2bd-e5621d95959a")
+		)
+		(pin "4"
+			(uuid "ea3a5370-1b1b-40c0-b4b5-4adb0607a181")
+		)
+		(instances
+			(project "dual-can-gateway"
+				(path "/00000000-0000-0000-0000-000064d1a2f1"
+					(reference "ESP_FLASH1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 114.3 208.28 180)
 		(unit 1)
@@ -14382,85 +15033,6 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 168.91 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0a632c9b-13c1-40a8-8c05-391cceb9601f")
-		(property "Reference" "STM_1_SWCLK1"
-			(at 283.972 166.116 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 281.94 175.006 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "57024686-0aba-4cd5-92fe-1b5b02ae5191")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "STM_1_SWCLK1")
 					(unit 1)
 				)
 			)
@@ -14641,85 +15213,6 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 214.63 242.57 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "13d81730-820e-426b-aefd-184aa2408e8f")
-		(property "Reference" "JP-MITL-2"
-			(at 214.63 258.318 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 213.36 253.746 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 209.55 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 209.55 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 214.63 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "232b9843-e929-450e-9cec-d16048c9226c")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "JP-MITL-2")
 					(unit 1)
 				)
 			)
@@ -15286,243 +15779,6 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "C29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 139.7 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2b1dfc7a-b982-4dd3-867d-a8d5375ee2e3")
-		(property "Reference" "STM_2_SWID1"
-			(at 282.956 136.906 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 285.496 140.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 144.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a85a8e4b-a089-4885-81fb-de8503b7d7ea")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "STM_2_SWID1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 54.61 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2babe7ea-7744-488a-86ff-25fa968da3e1")
-		(property "Reference" "ESP_RXD0"
-			(at 282.702 51.816 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 281.94 60.706 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "12bc062f-d6cb-4bee-b917-7f1ff3283a7c")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "ESP_RXD0")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 152.4 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2f6512af-c347-4092-97fa-98b84cf27d80")
-		(property "Reference" "STM_2_NRST1"
-			(at 282.956 149.86 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 285.496 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 152.4 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b36d516-b7d2-43d3-819e-177851ade5fd")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "STM_2_NRST1")
 					(unit 1)
 				)
 			)
@@ -16200,85 +16456,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 48.26 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3a11a8bd-5f8f-432c-8352-e65cb4ce6b3e")
-		(property "Reference" "ESP_TXD0"
-			(at 282.702 45.466 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 285.496 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "463d0293-77c9-489f-baad-bf47ec42b7b8")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "ESP_TXD0")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:AO3401A")
 		(at 41.91 31.75 270)
 		(unit 1)
@@ -16528,85 +16705,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 162.56 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4d56aca0-e57d-4c48-9c79-cee75fb19a42")
-		(property "Reference" "STM_1_SWID1"
-			(at 282.956 159.766 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 285.496 163.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7be3a2de-f8e5-4650-b9b0-a23d8ec8be84")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "STM_1_SWID1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:2N7002")
 		(at 67.31 73.66 270)
 		(unit 1)
@@ -16845,6 +16943,92 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Pin")
+		(at 280.67 168.91 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59e08671-efbb-4d6d-b14a-bd04f6a4b44e")
+		(property "Reference" "STM_1_FLASH1"
+			(at 281.94 168.9099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x03_Pin"
+			(at 281.94 170.1799 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 280.67 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 280.67 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 280.67 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "b4923fea-431f-4662-b727-2b95c1a53a91")
+		)
+		(pin "1"
+			(uuid "ec6251df-2b76-4e6b-b90b-5ce414f41218")
+		)
+		(pin "3"
+			(uuid "fa979cb2-e453-44fc-a57a-b7987c6b69db")
+		)
+		(instances
+			(project "dual-can-gateway"
+				(path "/00000000-0000-0000-0000-000064d1a2f1"
+					(reference "STM_1_FLASH1")
 					(unit 1)
 				)
 			)
@@ -17535,85 +17719,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 35.56 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "67325fa5-6a81-4b74-9dc8-ae7b590db07a")
-		(property "Reference" "ESP_EN1"
-			(at 281.432 33.02 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 285.496 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 35.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fb7ce15e-eff2-4cd0-8216-ad213c356a36")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "ESP_EN1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "my kicad lib:TJA1055T")
 		(at 133.35 215.9 0)
 		(unit 1)
@@ -17890,6 +17995,88 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 274.32 248.92 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6cd73088-16aa-420b-941a-d6f1b816e72b")
+		(property "Reference" "JP-CAN-HS-MITM1"
+			(at 266.7 250.19 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 278.13 249.5549 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 274.32 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 274.32 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 274.32 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a1bb7fd0-1e5e-4434-aaed-1bc71efc85b6")
+		)
+		(pin "1"
+			(uuid "3c6e1639-3f0b-435f-9d0a-14fde2d65b52")
+		)
+		(instances
+			(project "dual-can-gateway"
+				(path "/00000000-0000-0000-0000-000064d1a2f1"
+					(reference "JP-CAN-HS-MITM1")
 					(unit 1)
 				)
 			)
@@ -18779,8 +18966,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 41.91 270)
+		(lib_id "Connector:Conn_01x03_Pin")
+		(at 280.67 146.05 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -18788,9 +18975,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "92772735-b4e5-4215-af30-8b0fe2de17cc")
-		(property "Reference" "ESP_ID0"
-			(at 281.686 39.37 90)
+		(fields_autoplaced yes)
+		(uuid "969e4f42-ebe4-439e-929c-853866ff6493")
+		(property "Reference" "STM_2_FLASH1"
+			(at 281.94 146.0499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18800,8 +18988,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 285.496 43.18 0)
+		(property "Value" "Conn_01x03_Pin"
+			(at 281.94 147.3199 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18812,8 +19000,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 46.99 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+			(at 280.67 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18824,7 +19012,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 274.32 46.99 0)
+			(at 280.67 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18834,8 +19022,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 274.32 41.91 0)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 280.67 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18844,14 +19032,20 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "2"
+			(uuid "eb735925-26d2-46da-9d52-e5656e9dddfd")
 		)
 		(pin "1"
-			(uuid "14336f16-7e8e-49b6-9db2-1947fb571c20")
+			(uuid "d01f08e6-b759-49ac-b041-f24a3db14555")
+		)
+		(pin "3"
+			(uuid "1b6d1fbc-35df-4c1e-a935-bd6500d2c5ed")
 		)
 		(instances
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "ESP_ID0")
+					(reference "STM_2_FLASH1")
 					(unit 1)
 				)
 			)
@@ -19355,85 +19549,6 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 274.32 242.57 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "af3130c5-4963-47b0-964a-2cc09cbd048d")
-		(property "Reference" "JP-MITM-1"
-			(at 274.32 258.318 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 268.224 250.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 269.24 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 269.24 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "be516cc6-099f-42f2-a5a6-c809602fb3e5")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "JP-MITM-1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
 		(at 274.32 60.96 270)
 		(unit 1)
 		(body_style 1)
@@ -19587,85 +19702,6 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "C18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 175.26 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b4aec1a5-9336-4ae9-8ea3-e16e7b69e08f")
-		(property "Reference" "STM_1_NRST1"
-			(at 282.956 172.72 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 285.496 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ff1bd265-ac49-4011-84d7-bfd6e3d93fc6")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "STM_1_NRST1")
 					(unit 1)
 				)
 			)
@@ -20338,8 +20374,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 210.82 242.57 180)
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 210.82 248.92 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20347,9 +20383,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d6b61c4b-36b7-4e8a-be75-20a7066304b8")
-		(property "Reference" "JP-MITL-1"
-			(at 210.82 258.318 90)
+		(uuid "d7dc0aa5-48cc-46aa-898a-491136bea82e")
+		(property "Reference" "JP-CAN-HS-LISTEN1"
+			(at 202.438 250.19 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20359,8 +20395,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 204.724 250.19 0)
+		(property "Value" "Conn_01x02_Pin"
+			(at 214.63 249.5549 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20371,8 +20407,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 205.74 242.57 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 210.82 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20383,7 +20419,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 242.57 0)
+			(at 210.82 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20393,8 +20429,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 210.82 242.57 0)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 210.82 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20405,12 +20441,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "f1fedc5f-bcbd-4ab4-acd6-5b7b45af4b71")
+			(uuid "b32d8bde-7986-4f29-895b-4a867aed8576")
+		)
+		(pin "2"
+			(uuid "081075a7-e60b-4f05-b7d8-d712cf7ffa2e")
 		)
 		(instances
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "JP-MITL-1")
+					(reference "JP-CAN-HS-LISTEN1")
 					(unit 1)
 				)
 			)
@@ -20655,85 +20694,6 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 274.32 146.05 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "de274250-e46f-4e36-9491-b719110e916c")
-		(property "Reference" "STM_2_SWCLK1"
-			(at 283.972 143.256 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 281.94 152.146 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 274.32 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 274.32 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "699aa05c-4614-4029-84ad-5bc2c056a09c")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "STM_2_SWCLK1")
 					(unit 1)
 				)
 			)
@@ -21585,85 +21545,6 @@
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
 					(reference "CAN-HS-MITM1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 278.13 242.57 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fa4c8dac-9400-4a78-b340-617dfe338bd5")
-		(property "Reference" "JP-MITM-2"
-			(at 278.13 258.318 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 276.86 253.746 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 273.05 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 273.05 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 278.13 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8a7ad446-2c50-4033-bd6d-ff8c425a69f7")
-		)
-		(instances
-			(project "dual-can-gateway"
-				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "JP-MITM-2")
 					(unit 1)
 				)
 			)

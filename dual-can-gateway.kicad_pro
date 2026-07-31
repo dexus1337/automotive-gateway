@@ -573,8 +573,9 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "out",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -709,7 +710,7 @@
         "uuid": "00000000-0000-0000-0000-000064d1a2f1"
       }
     ],
-    "used_designators": "C32,J1-3,CAN\\-FT\\-MITM1,AUTO_OFF1,CAN\\-FT\\-LISTEN1,CAN\\-HS\\-LISTEN1,CAN\\-HS\\-MITM1",
+    "used_designators": "C32,J1-3,AUTO_OFF1,CAN\\-FT\\-MITM1,CAN\\-FT\\-LISTEN1,CAN\\-HS\\-LISTEN1,CAN\\-HS\\-MITM1,STM_1_FLASH1,ESP_FLASH1,JP\\-CAN\\-HS\\-LISTEN1,JP\\-CAN\\-HS\\-MITM1,STM_2_FLASH1",
     "variants": []
   },
   "sheets": [
