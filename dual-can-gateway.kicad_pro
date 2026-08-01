@@ -64,7 +64,7 @@
           "min_island_area": 10.0,
           "min_thickness": 0.25,
           "pad_connection": 1,
-          "remove_islands": 1,
+          "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
@@ -76,7 +76,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "courtyards_overlap|109355252|13844683|77d483a7-136d-4fae-876a-1df6093d3047|ec9e234c-0ada-4b97-a9f0-39ca649973eb",
+          ""
+        ],
+        [
+          "items_not_allowed|109728000|17272000|617339c5-4798-4455-ac7e-440b3b3bd324|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "items_not_allowed|109728000|17272000|ec9e234c-0ada-4b97-a9f0-39ca649973eb|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "pth_inside_courtyard|109728000|17272000|617339c5-4798-4455-ac7e-440b3b3bd324|77d483a7-136d-4fae-876a-1df6093d3047",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -160,7 +177,7 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
+        "min_through_hole_diameter": 0.2,
         "min_track_width": 0.2,
         "min_via_annular_ring": 0.15,
         "min_via_annular_width": 0.1,
@@ -257,6 +274,10 @@
         {
           "diameter": 1.0,
           "drill": 0.5
+        },
+        {
+          "diameter": 2.2,
+          "drill": 1.1
         }
       ],
       "zones_allow_external_fillets": false
@@ -710,7 +731,7 @@
         "uuid": "00000000-0000-0000-0000-000064d1a2f1"
       }
     ],
-    "used_designators": "C32,J1-3,AUTO_OFF1,CAN\\-FT\\-MITM1,CAN\\-FT\\-LISTEN1,CAN\\-HS\\-LISTEN1,CAN\\-HS\\-MITM1,STM_1_FLASH1,ESP_FLASH1,JP\\-CAN\\-HS\\-LISTEN1,JP\\-CAN\\-HS\\-MITM1,STM_2_FLASH1",
+    "used_designators": "D4,R11,R13,J3,Q2-3,H1-4",
     "variants": []
   },
   "sheets": [
