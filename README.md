@@ -256,8 +256,3 @@ Regardless of whether running in **Additional ECU** or **Inline MitM Filter** mo
   - Flash using a standard 3.3V USB-to-UART adapter connected to `ESP_TXD0`, `ESP_RXD0`, `ESP_EN1`, and `ESP_ID0`.
 
 ---
-
-## 📄 License & Acknowledgments
-
-- **License**: CERN Open Hardware Licence Version 2 - Permissive ([CERN-OHL-P](https://cern-ohl.web.cern.ch/))
-- **Author**: dexus1337
