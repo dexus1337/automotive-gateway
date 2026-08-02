@@ -3,9 +3,8 @@
 [![KiCad Version](https://img.shields.io/badge/KiCad-v8.0%2B-blue.svg)](https://kicad.org)
 [![Hardware License](https://img.shields.io/badge/License-CERN--OHL--P-green.svg)](https://cern-ohl.web.cern.ch/)
 [![Architecture](https://img.shields.io/badge/Architecture-Dual--STM32%20%2B%20ESP32-orange.svg)]()
-[![Platform](https://img.shields.io/badge/Platform-ADAM%20Hardware%20Engine-purple.svg)]()
 
-An automotive-grade multi-purpose CAN module, Man-in-the-Middle (MitM) filter, and wireless telemetry gateway. Designed by **ADAM Hardware Engine**, this board bridges both **High-Speed CAN** and **Fault-Tolerant Low-Speed CAN** networks with dedicated real-time microcontrollers and an ESP32 Wi-Fi/Bluetooth gateway.
+An automotive-grade multi-purpose CAN module, Man-in-the-Middle (MitM) filter, and wireless telemetry gateway. This board bridges both **High-Speed CAN** and **Fault-Tolerant Low-Speed CAN** networks with dedicated real-time microcontrollers and an ESP32 Wi-Fi/Bluetooth co-processor.
 
 ![Automotive Dual-CAN Gateway PCB Preview](preview.png)
 
@@ -15,11 +14,11 @@ An automotive-grade multi-purpose CAN module, Man-in-the-Middle (MitM) filter, a
 
 - [Overview](#-overview)
 - [Operating Modes](#-operating-modes)
+- [Deployment & Vehicle Integration](#-deployment--vehicle-integration)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
 - [Hardware & Functional Zones](#-hardware--functional-zones)
 - [Pinout & Interface Definitions](#-pinout--interface-definitions)
-- [Power Management & Auto Sleep/Wakeup](#-power-management--auto-sleepwakeup)
 - [Bill of Materials (BOM) Summary](#-bill-of-materials-bom-summary)
 - [PCB Layout & Physical Specifications](#-pcb-layout--physical-specifications)
 - [Getting Started & Development](#-getting-started--development)
@@ -29,69 +28,73 @@ An automotive-grade multi-purpose CAN module, Man-in-the-Middle (MitM) filter, a
 
 ## 🛠 Overview
 
-Modern vehicle architectures utilize multiple CAN physical layers and baud rates—typically **High-Speed CAN** (500 kbps / 1 Mbps for powertrain and chassis) and **Fault-Tolerant Low-Speed CAN** (up to 125 kbps for body electronics, doors, HVAC, and interior systems).
+Modern vehicle architectures utilize multiple CAN physical layers and baud rates—typically **High-Speed CAN** (up to 1 Mbps for powertrain and chassis) and **Fault-Tolerant Low-Speed CAN** (up to 125 kbps for body control, doors, HVAC, and interior systems).
 
-The **Automotive Dual-CAN Gateway & Filter** is a modular, high-reliability PCB platform designed for advanced automotive reverse engineering, message manipulation, custom ECU addition, and wireless telemetry. With two dedicated 32-bit ARM Cortex-M4 microcontrollers (STM32F446) and an ESP32 wireless co-processor, it provides strict real-time deterministic performance across all CAN channels alongside wireless connectivity.
+The **Automotive Dual-CAN Gateway & Filter** is a versatile PCB platform designed for automotive reverse engineering, real-time message manipulation, secondary ECU addition, and wireless telemetry. Equipped with two 32-bit ARM Cortex-M4 microcontrollers (STM32F446) and an ESP32 wireless co-processor, it provides real-time deterministic performance across both CAN physical layers.
 
 ---
 
 ## ⚙️ Operating Modes
 
-The board is engineered for extreme flexibility across three primary operational deployment modes:
+The board operates in two primary functional modes:
 
 ```
 ─────────────────────────────────────────────────────────────────────────────────────────────
- Mode A: Additional ECU (Listen-Only / Sniffer)
- [ Vehicle CAN Bus ] ──► ( LISTEN Channel ) ──► [ Dual-CAN Gateway ] (Passive / Wi-Fi Log)
+ Mode 1: Additional ECU (Listen-Only)
+ [ Vehicle CAN Bus ] ──► ( LISTEN Channel Active ) ──► [ Dual-CAN Gateway ] (Telemetry / Passive Log)
 
- Mode B: Inline Man-in-the-Middle (MitM Filter)
+ Mode 2: Inline Man-in-the-Middle (MitM Filter)
  [ Vehicle CAN Bus ] ──► ( Input Channel ) ──► [ Real-Time Filter ] ──► ( Output Channel ) ──► [ Target ECU ]
-
- Mode C: Permanent In-Vehicle Installation
- [ BATT +12V / IGN ] ──► [ Auto Sleep / FT-CAN Wakeup ] ──► Ultra-Low Standby Power
 ─────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
-### 1. Additional ECU Mode (Listen / Sniffer / Telemetry)
-- **Operation**: Connects to the target CAN bus using **only the LISTEN channels** (`CAN-HS-1` and/or `CAN-FT-1`).
-- **Use Case**: Acts as a passive sniffer, logging tool, or custom secondary ECU (e.g. adding aftermarket sensors, ambient lighting control, or performance telemetry).
-- **Advantage**: The transmit lines on the second channel remain unused or isolated, preventing any accidental bus disruption or error frame generation on the factory vehicle network.
+### 1. Additional ECU Mode (Listen-Only)
+- **Operation**: Only the **LISTEN channels** (`CAN-HS-1` and/or `CAN-FT-1`) are active on the vehicle bus.
+- **Function**: Acts as a secondary ECU, passive data logger, or wireless bridge.
+- **Safety**: Transmit channels remain inactive or isolated, guaranteeing zero disruption or error frame generation on factory vehicle networks.
 
-### 2. Inline Man-in-the-Middle (MitM / Message Filter) Mode
-- **Operation**: The board is wired **in series between the vehicle bus and an OEM ECU** (e.g., placing `CAN-HS-1` on the main bus side and `CAN-HS-2` on the target ECU side).
-- **Use Case**: Real-time filtering, message blocking, payload modification, speed limit removal, ID translation, or diagnostic command injection.
-- **Hardware Failsafe / Bypass**: Features physical jumper headers (`JP-MITM` for High-Speed, `JP-MITL` for Fault-Tolerant) allowing direct physical bypass lines to pass signals straight through during setup or failsafe recovery.
+### 2. Inline Man-in-the-Middle (MitM Filter) Mode
+- **Operation**: Installed in series between the vehicle bus and a specific target ECU (e.g. `CAN-HS-1` on the bus side, `CAN-HS-2` on the target ECU side).
+- **Function**: Intercepts frames in real time—enabling packet filtering, message modification, frame dropping, ID translation, or custom message injection before passing data to the destination ECU.
+- **Hardware Failsafe / Bypass**: Features physical bypass jumpers (`JP-MITM` for High-Speed CAN, `JP-MITL` for Fault-Tolerant CAN) for direct pass-through testing or hardware failsafe bypass.
 
-### 3. Permanent In-Vehicle Installation (Auto Sleep & Wakeup)
-- **Operation**: Designed to be permanently wired into the vehicle's unswitched battery supply (`ALWAYS_ON` / `12V_IN`).
-- **Use Case**: Invisible, permanent installation inside the vehicle dashboard, cluster, or door trim.
-- **Power Management**: Utilizing the built-in low-power standby modes of the `TJA1055T` Fault-Tolerant transceivers and dedicated power circuitry, the module automatically powers down when vehicle CAN activity stops and wakes up instantaneously when network activity is detected on the FT-CAN bus.
+---
+
+## 🚗 Deployment & Vehicle Integration
+
+Regardless of whether running in **Additional ECU** or **Inline MitM Filter** mode, the board supports two deployment options:
+
+### External / Bench / Temporary Diagnostic Use
+- Connect on-demand for temporary bus logging, ECU bench testing, diagnostic manipulation, or temporary wireless debugging.
+
+### Permanent In-Vehicle Residence (Auto Sleep & Wakeup)
+- Can be permanently wired into the vehicle's unswitched battery supply (`ALWAYS_ON` / `12V_IN`).
+- **Low Power & Auto Sleep/Wake**: Uses the native low-power standby features of the `TJA1055T` Fault-Tolerant Low-Speed CAN transceivers. When vehicle CAN bus activity stops, the module automatically enters an ultra-low quiescent current standby state. When network activity is detected on the FT-CAN bus, it wakes up instantaneously to resume active processing.
 
 ---
 
 ## ✨ Key Features
 
-- **Dual STM32F446 Real-Time Filtering Core**:
-  - Two ARM Cortex-M4 microcontrollers running at up to 180 MHz (512 KB Flash, 128 KB SRAM each).
-  - MCU 1 dedicated to Low-Speed Fault-Tolerant CAN processing.
-  - MCU 2 dedicated to High-Speed CAN processing.
-- **Multi-Physical Layer Transceiver Matrix**:
+- **Dual STM32F446 Microcontroller Core**:
+  - Two ARM Cortex-M4 microcontrollers @ 180 MHz (512 KB Flash, 128 KB SRAM each).
+  - MCU 1: Low-Speed Fault-Tolerant CAN controller.
+  - MCU 2: High-Speed CAN controller.
+- **Multi-Physical Layer CAN Support**:
   - **High-Speed CAN (up to 5 Mbps, CAN FD Ready)**: 2× NXP `TJA1044GT-3` / `TJA1051T-3` transceivers.
-  - **Fault-Tolerant Low-Speed CAN**: 2× NXP `TJA1055T` transceivers supporting single-wire fallback mode and bus wake-up detection.
-- **Wireless Telemetry & Control Co-Processor**:
+  - **Fault-Tolerant Low-Speed CAN**: 2× NXP `TJA1055T` transceivers supporting single-wire fallback and automatic wake-up detection.
+- **Wireless Telemetry Co-Processor**:
   - `ESP32-WROOM-32E` co-processor with Wi-Fi (802.11 b/g/n) and Bluetooth / BLE.
-  - Concurrent dual high-speed UART links connecting ESP32 to MCU 1 and MCU 2 independently.
-  - Hosts real-time web dashboards, WebSocket streams, or CAN-over-IP telemetry bridges.
-- **Automotive Power Supply & Protection**:
-  - Wide input voltage range from 12V automotive battery and ignition lines (`12V_IN`, `ALWAYS_ON`, `AUTO_POWER`).
-  - Active reverse-polarity protection using a P-Channel MOSFET (`AO3401A`).
-  - Overvoltage and surge protection via Transient Voltage Suppressor (`SMCJ24CA` TVS + `SS34` Schottky).
-  - High-efficiency primary step-down buck converter (`LM2596S-5` @ 5V, 3A capacity).
-  - Secondary low-noise LDO regulator (`AMS1117-3.3` @ 3.3V, 1A capacity).
-- **Diagnostic & Bypass Jumpers**:
-  - Hardware MitM bypass headers (`JP-MITM`, `JP-MITL`).
-  - Standardized SWD debug headers for both STM32 microcontrollers.
-  - Serial programming and boot selection headers for the ESP32 module.
+  - Dual independent high-speed UART links to MCU 1 and MCU 2.
+- **Automotive Power & Protection**:
+  - Broad input voltage handling (+12V BATT / IGN).
+  - Active reverse-polarity protection via P-Channel MOSFET (`AO3401A`).
+  - Overvoltage & surge protection via TVS (`SMCJ24CA`) and Schottky rectifier (`SS34`).
+  - High-efficiency primary 5V step-down buck regulator (`LM2596S-5`, 3A capacity).
+  - Secondary 3.3V LDO regulator (`AMS1117-3.3`, 1A capacity).
+- **Hardware Diagnostic & Bypass Jumpers**:
+  - MitM bypass headers (`JP-MITM`, `JP-MITL`).
+  - Standardized SWD debug headers for MCU 1 & MCU 2.
+  - Serial programming & boot pins for ESP32.
 
 ---
 
@@ -128,7 +131,7 @@ The board is engineered for extreme flexibility across three primary operational
          ▼           ▼                      ▼           ▼              ▼                         ▼
     ┌──────────────────────┐           ┌──────────────────────┐   ┌────────────────────────────────────┐
     │ Low-Speed FT-CAN Bus │           │ High-Speed CAN Bus   │   │ Wi-Fi / BLE Wireless Bridge        │
-    │ (Body / Interior)    │           │ (Powertrain/Chassis) │   │ (Web UI / Telemetry / ADAM Engine) │
+    │ (Body / Interior)    │           │ (Powertrain/Chassis) │   │ (Web UI / Live Telemetry Stream)   │
     └──────────────────────┘           └──────────────────────┘   └────────────────────────────────────┘
 ```
 
@@ -136,37 +139,37 @@ The board is engineered for extreme flexibility across three primary operational
 
 ## 🔍 Hardware & Functional Zones
 
-### Zone 1: Automotive Power Regulation & Protection
-- **Input Channels**: `12V_IN`, `ALWAYS_ON`, `AUTO_POWER`, `GND`.
+### Zone 1: Power Regulation & Protection
+- **Input Rails**: `12V_IN`, `ALWAYS_ON`, `AUTO_POWER`, `GND`.
 - **Protection**:
-  - `Q1 (AO3401A)` P-channel MOSFET provides low voltage drop reverse-polarity protection.
-  - `D1 (SMCJ24CA)` TVS diode absorbs load dumps and inductive voltage spikes common on automotive 12V rails.
-  - `D2 (SS34)` Schottky barrier diode prevents reverse current flow.
-- **Power Rails**:
-  - `U8 (LM2596S-5)` high-efficiency 5V 3A buck converter steps down raw automotive battery voltage to 5V.
-  - `U9 (AMS1117-3.3)` linear regulator provides noise-free 3.3V power to the STM32 MCUs, ESP32 co-processor, and transceivers.
+  - `Q1 (AO3401A)` P-channel MOSFET provides reverse polarity protection.
+  - `D1 (SMCJ24CA)` TVS diode clamps load dump spikes.
+  - `D2 (SS34)` Schottky diode prevents back-feeding.
+- **Regulators**:
+  - `U8 (LM2596S-5)` 5V 3A buck converter.
+  - `U9 (AMS1117-3.3)` 3.3V 1A LDO regulator.
 
-### Zone 2: MCU #1 – Fault-Tolerant Low-Speed CAN Core
-- **Microcontroller**: `U1` (`STM32F446RETx` LQFP-64).
+### Zone 2: MCU #1 – Low-Speed Fault-Tolerant CAN Core
+- **MCU**: `U1` (`STM32F446RETx` LQFP-64).
 - **Transceivers**: `U6` & `U7` (`NXP TJA1055T` SOIC-14).
-- **Function**: Manages low-speed interior/body CAN communication (door controls, instrument clusters, HVAC, body control modules).
-- **Pin Map**:
+- **Function**: Handles low-speed body/interior CAN networks.
+- **Pin Mapping**:
   - CAN1 RX: `PA11`, TX: `PA12`
   - CAN2 RX: `PB8`, TX: `PB9`
-  - ESP32 Inter-MCU Bridge: `MCU1_UART_TX` / `MCU1_UART_RX`
+  - ESP32 Serial Link: `MCU1_UART_TX` / `MCU1_UART_RX`
 
 ### Zone 3: MCU #2 – High-Speed CAN Core
-- **Microcontroller**: `U2` (`STM32F446RETx` LQFP-64).
+- **MCU**: `U2` (`STM32F446RETx` LQFP-64).
 - **Transceivers**: `U4` & `U5` (`NXP TJA1044GT-3` / `TJA1051T-3` SOIC-8).
-- **Function**: Handles latency-critical high-bandwidth powertrain, chassis, and OBD-II diagnostic CAN networks.
-- **Pin Map**:
+- **Function**: Handles latency-critical High-Speed CAN networks.
+- **Pin Mapping**:
   - CAN1 RX: `PA11`, TX: `PA12`
   - CAN2 RX: `PB8`, TX: `PB9`
-  - ESP32 Inter-MCU Bridge: `MCU2_UART_TX` / `MCU2_UART_RX`
+  - ESP32 Serial Link: `MCU2_UART_TX` / `MCU2_UART_RX`
 
 ### Zone 4: ESP32 Wireless Telemetry Co-Processor
 - **Module**: `U3` (`ESP32-WROOM-32E`).
-- **Function**: Serves a configuration web app, WebSocket live data feed, or CAN-over-IP telemetry channel over Wi-Fi and Bluetooth. Operates dual independent UART channels to MCU 1 and MCU 2.
+- **Function**: Serves configuration pages, live CAN data over WebSockets/Wi-Fi/Bluetooth, and communicates with MCU 1 and MCU 2 over independent hardware UART links.
 
 ---
 
@@ -197,17 +200,7 @@ The board is engineered for extreme flexibility across three primary operational
 ### 4. Programming & Debug Headers
 - **STM32 MCU #1 (Low-Speed)**: `STM_1_SWCLK1`, `STM_1_SWID1`, `STM_1_NRST1`, `GND`
 - **STM32 MCU #2 (High-Speed)**: `STM_2_SWCLK1`, `STM_2_SWID1`, `STM_2_NRST1`, `GND`
-- **ESP32 Co-Processor**: `ESP_TXD0`, `ESP_RXD0`, `ESP_EN1`, `ESP_ID0` (GPIO0 Boot Mode)
-
----
-
-## ⚡ Power Management & Auto Sleep/Wakeup
-
-The module is specifically optimized for permanent installation inside modern vehicles without running down the battery:
-
-1. **Auto Sleep Trigger**: When the vehicle is parked and CAN bus activity ceases, the `TJA1055T` Fault-Tolerant CAN transceivers automatically transition into low-power standby mode.
-2. **Low-Power State**: Microcontroller power consumption is minimized using low-power sleep modes, disabling non-essential peripherals while maintaining context in RAM.
-3. **Instantaneous Wakeup**: Upon detecting a dominant state transition or bus activity on the FT-CAN bus, the transceiver signals an interrupt that wakes up the system, restoring full operational mode within milliseconds.
+- **ESP32 Co-Processor**: `ESP_TXD0`, `ESP_RXD0`, `ESP_EN1`, `ESP_ID0` (GPIO0 Boot Pin)
 
 ---
 
@@ -256,16 +249,15 @@ The module is specifically optimized for permanent installation inside modern ve
 
 ### 2. Firmware Development & Flashing
 - **STM32 Microcontrollers (MCU 1 & MCU 2)**:
-  - Supports STM32CubeIDE, PlatformIO, or Keil.
+  - Developed with STM32CubeIDE, PlatformIO, or Keil.
   - Flash using an ST-LINK V2/V3 connected to `SWCLK`, `SWDIO`, `NRST`, and `GND` headers.
 - **ESP32 Co-Processor**:
-  - Built using ESP-IDF or Arduino-ESP32.
+  - Developed using ESP-IDF or Arduino-ESP32.
   - Flash using a standard 3.3V USB-to-UART adapter connected to `ESP_TXD0`, `ESP_RXD0`, `ESP_EN1`, and `ESP_ID0`.
 
 ---
 
 ## 📄 License & Acknowledgments
 
-- **Owner**: ADAM Hardware Engine
 - **License**: CERN Open Hardware Licence Version 2 - Permissive ([CERN-OHL-P](https://cern-ohl.web.cern.ch/))
-- **Design / Author**: dexus1337 / ADAM Hardware Engineering Team
+- **Author**: dexus1337

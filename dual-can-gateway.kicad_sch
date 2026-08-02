@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "Automotive Dual-CAN Filter & WiFi Gateway")
-		(company "ADAM Hardware Engine")
+		(company "dexus1337")
 		(comment 1 "2x STM32F446 + ESP32 + 2x TJA1055 + 2x TJA1051")
 	)
 	(lib_symbols
