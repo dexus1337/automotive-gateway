@@ -14987,7 +14987,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "10k"
 			(at 109.22 227.33 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15499,7 +15499,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_THT:L_Radial_D8.7mm_P5.00mm_Fastron_07HCP"
+		(property "Footprint" "Inductor_SMD:L_Bourns_SRP6060FA"
 			(at 95.25 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -21036,7 +21036,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Zener"
+		(property "Value" "MMSZ12T1G"
 			(at 36.83 24.892 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21206,7 +21206,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec7317bd-9413-425d-83f9-9b892e5a13bb")
-		(property "Reference" "J1"
+		(property "Reference" "12V1"
 			(at 18.415 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -21270,7 +21270,7 @@
 		(instances
 			(project "dual-can-gateway"
 				(path "/00000000-0000-0000-0000-000064d1a2f1"
-					(reference "J1")
+					(reference "12V1")
 					(unit 1)
 				)
 			)
