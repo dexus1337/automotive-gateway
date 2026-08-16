@@ -1,7 +1,6 @@
 # Automotive Dual-CAN Gateway, Filter & Telemetry Board
 
 [![KiCad Version](https://img.shields.io/badge/KiCad-v8.0%2B-blue.svg)](https://kicad.org)
-[![Hardware License](https://img.shields.io/badge/License-CERN--OHL--P-green.svg)](https://cern-ohl.web.cern.ch/)
 [![Architecture](https://img.shields.io/badge/Architecture-Dual--STM32%20%2B%20ESP32-orange.svg)]()
 
 An automotive-grade multi-purpose CAN module, Man-in-the-Middle (MitM) filter, and wireless telemetry gateway. This board bridges both **High-Speed CAN** and **Fault-Tolerant Low-Speed CAN** networks with dedicated real-time microcontrollers and an ESP32 Wi-Fi/Bluetooth co-processor.
@@ -256,8 +255,3 @@ Regardless of whether running in **Additional ECU** or **Inline MitM Filter** mo
   - Flash using a standard 3.3V USB-to-UART adapter connected to `ESP_TXD0`, `ESP_RXD0`, `ESP_EN1`, and `ESP_ID0`.
 
 ---
-
-## 📄 License & Acknowledgments
-
-- **License**: CERN Open Hardware Licence Version 2 - Permissive ([CERN-OHL-P](https://cern-ohl.web.cern.ch/))
-- **Author**: dexus1337
