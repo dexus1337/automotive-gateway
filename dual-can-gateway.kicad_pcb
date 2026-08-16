@@ -21550,7 +21550,7 @@
 		(uuid "fc72fda6-cdfc-4420-80bd-13a725487a52")
 	)
 	(via
-		(at 88.3768 68.1736)
+		(at 88.3768 68.834)
 		(size 1)
 		(drill 0.5)
 		(layers "F.Cu" "B.Cu")
