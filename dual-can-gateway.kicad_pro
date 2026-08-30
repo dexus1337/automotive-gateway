@@ -781,7 +781,7 @@
         "uuid": "00000000-0000-0000-0000-000064d1a2f1"
       }
     ],
-    "used_designators": "R14-15",
+    "used_designators": "ESP_FLASH1-2,SW1-2,ESP_BOOT1,ESP_RESET1,R16-17,C34",
     "variants": []
   },
   "sheets": [
