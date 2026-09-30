@@ -781,7 +781,7 @@
         "uuid": "00000000-0000-0000-0000-000064d1a2f1"
       }
     ],
-    "used_designators": "D5,R19,C37",
+    "used_designators": "D5-6,BOOT1,R19-22,C37,RESET1",
     "variants": []
   },
   "sheets": [
