@@ -541,7 +541,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "dual-can-gateway.kicad_pro",
+    "filename": "automotive-gateway.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -772,18 +772,18 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "dual-can-gateway.kicad_sch",
-        "name": "dual-can-gateway",
+        "filename": "automotive-gateway.kicad_sch",
+        "name": "automotive-gateway",
         "uuid": "00000000-0000-0000-0000-000064d1a2f1"
       }
     ],
-    "used_designators": "D5-6,BOOT1,R19-22,C37-39,U10-11,RESET1,CAN\\-HS3-4,K\\-LINE1",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
       "00000000-0000-0000-0000-000064d1a2f1",
-      "dual-can-gateway"
+      "automotive-gateway"
     ]
   ],
   "text_variables": {},
