@@ -2,3 +2,5 @@
 out/*
 .history/
 *.lck
+automotive-gateway-drc.rpt
+automotive-gateway-erc.rpt
