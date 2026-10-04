@@ -120,6 +120,10 @@ To prevent 12V battery drain when permanently installed in a vehicle, the module
   - **High-Speed CAN (HS-CAN / CAN FD)**: 2× NXP `TJA1044GT-3` transceivers (ISO 11898-2:2016, CAN FD ready up to 5 Mbps) with switchable 120 Ω bus termination.
   - **Fault-Tolerant Low-Speed CAN (FT-CAN)**: 2× NXP `TJA1055T/3` transceivers (ISO 11898-3, up to 125 kbps) with single-wire fallback and automatic wake-up signaling.
   - **Dual K-Line / LIN (ISO 9141-2 / ISO 14230 / LIN 2.x)**: 2× NXP `TJA1021xT` transceivers (LIN 2.2A / SAE J2602) supporting OBD-II and KWP2000 diagnostic lines up to 20 kbaud.
+- **High-Precision External Quartz Clocking (HSE)**:
+  - Dedicated 8.000 MHz SMD-3225 4-pin quartz crystals (`Y1`, `Y2`) with 15 pF C0G load capacitors (`C40`–`C43`) for both STM32F405 MCUs.
+  - Automotive-grade $\pm 10\,\text{ppm}$ clock accuracy, eliminating internal RC oscillator frequency drift across automotive temperature ranges.
+  - **Zero-Error Baud Rate Timing**: Derives an exact 42 MHz APB1 peripheral clock, achieving $0.000\%$ timing error for the critical **83.3333 kBd** Fault-Tolerant CAN standard ($\text{BRP}=28$, $18\,T_q$, $83.33\%$ sample point) as well as exact bit rates for 100k, 125k, 250k, 500k, and 1 MBd HS-CAN / CAN FD.
 - **Wireless Telemetry Co-Processor**:
   - **ESP32-WROOM-32UE** module with 2.4 GHz Wi-Fi (802.11 b/g/n) and Bluetooth v4.2 BR/EDR & BLE.
   - Integrated U.FL external antenna connector for high-gain antenna placement inside vehicle dashboards or engine bays.
@@ -212,6 +216,7 @@ To prevent 12V battery drain when permanently installed in a vehicle, the module
 
 ### Zone 2: MCU #1 – Low-Speed Fault-Tolerant CAN Core
 - **Microcontroller**: `U1` (`STM32F405RGTx` LQFP-64, ARM Cortex-M4 @ 168 MHz).
+- **External Clock Source**: `Y1` (8.000 MHz SMD-3225 4-pin crystal on `PH0-OSC_IN` [Pin 5] and `PH1-OSC_OUT` [Pin 6]) with 15 pF load capacitors `C40` & `C41`.
 - **Transceivers**: `U6` & `U7` (`NXP TJA1055T/3` SOIC-14).
 - **Pin Mapping**:
   - `FT-CAN 1` (Channel 1): RX = `PA11`, TX = `PA12`, Wake Inhibit = `U6 INH`, Error = `U6 ~ERR` (`PB11` via `R8`), Standby = `PC7`, Enable = `PC8`.
@@ -223,6 +228,7 @@ To prevent 12V battery drain when permanently installed in a vehicle, the module
 
 ### Zone 3: MCU #2 – High-Speed CAN & Dual K-Line Core
 - **Microcontroller**: `U2` (`STM32F405RGTx` LQFP-64, ARM Cortex-M4 @ 168 MHz).
+- **External Clock Source**: `Y2` (8.000 MHz SMD-3225 4-pin crystal on `PH0-OSC_IN` [Pin 5] and `PH1-OSC_OUT` [Pin 6]) with 15 pF load capacitors `C42` & `C43`.
 - **High-Speed Transceivers**: `U4` & `U5` (`NXP TJA1044GT-3` SOIC-8).
 - **K-Line Transceivers**: `U10` & `U11` (`NXP TJA1021xT` SOIC-8).
 - **Pin Mapping**:
@@ -321,6 +327,7 @@ All external signals, power, bus lines, and programming ports are brought out to
 | **`D6`** | `LED_RGBA` | SMD 1210 (Common Anode) | 1 | RGB Status & Diagnostic Indicator LED |
 | **`L1`** | `33-68 µH` | Bourns SRP6060FA (SMD Inductor) | 1 | Power Inductor for LM2596 Buck Converter |
 | **`FB1`, `FB2`** | `Ferrite Bead` | SMD 0805 | 2 | High-Frequency Analog Noise Filtering Beads (`VDDA`) |
+| **`Y1`, `Y2`** | `8.000 MHz` | SMD-3225 4-Pin (HandSoldering) | 2 | High-Precision HSE Quartz Crystals (±10 ppm, 15 pF CL) |
 | **`RESET`, `BOOT`** | `PTS636Sx25` | Tactile Switch SMD | 2 | Push buttons for ESP32 Hardware Reset & Boot Mode |
 | **`R5`, `R6`** | `120 Ω` | SMD 0805 (1%) | 2 | High-Speed CAN Bus Termination Resistors |
 | **`R1` - `R4`** | `560 Ω` | SMD 0805 (1%) | 4 | Fault-Tolerant CAN Bias/Termination Resistors |
@@ -334,6 +341,7 @@ All external signals, power, bus lines, and programming ports are brought out to
 | **`C26`, `C27`** | `4.7 µF` | SMD 0805 | 2 | Power Rail Filtering Capacitors |
 | **`C25`, `C28`, `C34`** | `1 µF` | SMD 0805 | 3 | Logic Decoupling Capacitors |
 | **`C1` - `C4`, `C6`, `C7`, `C15` - `C19`, `C21` - `C24`, `C30`, `C31`, `C33`, `C35` - `C39` | `100 nF` | SMD 0805 | 22 | Local IC Decoupling Ceramic Capacitors |
+| **`C40` - `C43`** | `15 pF` | SMD 0805 (C0G/NP0) | 4 | Crystal Load Capacitors (HSE Oscillators) |
 | **`12V1`, `J3`, `CAN-HS1/2`, `CAN-FT1/2`, `JP-CAN-HS1/2`, `K-LINE1`** | `Conn_01x02_Pin` | 2.54 mm Pin Header (1×02) | 8 | External Power, Bus & Termination Headers |
 | **`STM_FLASH1`, `STM_FLASH2`, `ESP_FLASH1`** | `Conn_01x05_Pin` | 2.54 mm Pin Header (1×05) | 3 | Programming and SWD Debug Headers |
 | **`H1` - `H4`** | `MountingHole_Pad` | 3.2 mm Diameter (M3 Pad) | 4 | Grounded Chassis M3 Mounting Holes |
@@ -350,7 +358,7 @@ All external signals, power, bus lines, and programming ports are brought out to
 - **Ground Planes**: Continuous, low-impedance ground fill on the bottom layer with stitched return paths for high-frequency CAN differential lines.
 - **Mounting**: 4× grounded M3 mounting holes located at the corners.
 - **Footprint Pitch**: Standard 0805 (2012 metric) passive SMD footprints for reliable hand-soldering and prototype assembly.
-- **Total Footprint Count**: 103 placed board footprints.
+- **Total Footprint Count**: 109 placed board footprints.
 
 ---
 
@@ -387,4 +395,4 @@ The board features independent 5-pin SWD headers for each STM32F405 MCU:
 
 - **Hardware Design & Engineering**: Hans Lenhard
 - **Hardware Revision**: V1.1 (2026)
-- **Silkscreen Identification**: `LHE_DCANGW_11`
+- **Silkscreen Identification**: `LHE_AUTOGW_11`
